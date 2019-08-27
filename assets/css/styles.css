@@ -1,0 +1,616 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    width: 60%;
+    margin: auto;
+}
+
+header {
+    background: #1b1b1b;
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+}
+
+header .wrap a:hover {
+    text-decoration: none;
+}
+
+.logowrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logoicon {
+    background: url(../images/lenss.svg);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
+}
+
+.logoname {
+    color: #3fc6c2;
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 25px;
+}
+
+.logoname span {
+    color: #f9fcf5;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    color: #d2d2d2;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 0 10px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+nav ul li::after {
+    display: block;
+    content: '';
+    padding-top: 5px;
+    border-bottom: solid 1px #3fc6c2;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(0.6);
+}
+
+nav ul li.active {
+    color: #3fc6c2;
+}
+
+nav ul li.active::after {
+    transform: scaleX(0.6);
+}
+
+section.appdesc {
+    background: #3fc6c2;
+    padding: 45px 0;
+}
+
+section.appdesc .wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.appdesc .imgwrap {
+    width: 45%;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+section.appdesc .contentwrap {
+    padding: 45px 0;
+    width: 55%;
+}
+
+section.appdesc h1,
+section.appdesc p {
+    font-weight: 300;
+}
+
+section.appdesc h1 {
+    color: #343434;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+section.appdesc h1 span {
+    color: #f3faf8;
+    font-weight: 700;
+}
+
+section.appdesc h2 {
+    color: #343434;
+    margin-bottom: 11px;
+}
+
+section.appdesc p {
+    color: #f3faf8;
+    margin-bottom: 38px;
+}
+
+.supportedevices {
+    display: flex;
+}
+
+.supportedevices span {
+    margin: 0 15px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+.supportedevices span:first-child {
+    margin-left: 0;
+}
+
+.supportedevices span:last-child {
+    margin-right: 0;
+}
+
+.supportedevices span:not(:last-child)::after {
+    content: '';
+    display: block;
+    position: relative;
+    left: calc(100% + 15px);
+    width: 1px;
+    height: 100%;
+    transform: scaleY(.6);
+    background: #31adab;
+}
+
+section.appdesc .android-icon {
+    background: url('../images/android-logo.svg') no-repeat;
+    background-size: 35px 35px;
+}
+
+section.appdesc .apple-icon {
+    background: url('../images/apple.svg') no-repeat;
+    background-size: 35px 35px;
+}
+
+section.appdesc .windows-icon {
+    background: url('../images/windows-logo-silhouette.svg') no-repeat;
+    background-size: 35px 35px;
+}
+
+section.appfeatures {
+    background: #28292b;
+    color: #f8f5e5;
+    padding: 50px 0;
+}
+
+section.appfeatures .wrap {
+    text-align: center;
+}
+
+.appfeatures h2,
+.appfeatures h3,
+.appfeatures p {
+    font-weight: 300;
+}
+
+.appfeatures h2 {
+    margin-bottom: 20px;
+}
+
+.appfeatures h2,
+.appfeatures p {
+    color: #d2d6d5;
+}
+
+section.appfeatures .wrap>p {
+    margin-bottom: 40px;
+}
+
+.featureswrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featurewrap {
+    width: 27%;
+}
+
+.featurewrap span {
+    margin-bottom: 25px;
+}
+
+.featureswrap h3 {
+    margin-bottom: 13px;
+}
+
+.featureswrap h3,
+.additionalfeaturewrap h3,
+.pricingpackagewrap h3 {
+    color: #3fc6c2;
+    font-size: 16px;
+}
+
+.featureswrap p,
+.additionalfeaturewrap p {
+    font-size: 10px;
+}
+
+section.appfeatures .tablet-icon {
+    background: url('../images/smartphone.svg') no-repeat;
+    display: inline-block;
+    background-size: 65px 65px;
+    width: 65px;
+    height: 65px;
+}
+
+section.appfeatures .bulb-icon {
+    background: url('../images/lightbulb.svg') no-repeat;
+    display: inline-block;
+    background-size: 65px 65px;
+    width: 65px;
+    height: 65px;
+}
+
+section.appfeatures .clock-icon {
+    background: url('../images/clock.svg') no-repeat;
+    display: inline-block;
+    background-size: 65px 65px;
+    width: 65px;
+    height: 65px;
+}
+
+section.additionalappfeatures {
+    padding: 65px 0;
+}
+
+.additionalappfeatures h2,
+.additionalappfeatures .wrap>p {
+    text-align: center;
+}
+
+.additionalappfeatures h2,
+.additionalappfeatures h3,
+.additionalappfeatures p {
+    font-weight: 400;
+}
+
+.additionalappfeatures h2 {
+    margin-bottom: 22px;
+    font-weight: 400;
+    color: #333;
+    font-size: 32px;
+}
+
+.additionalappfeatures .wrap>p {
+    margin-bottom: 43px;
+}
+
+.additionalfeaturewrap h3 {
+    margin-bottom: 15px;
+}
+
+.additionalfeatureswrap {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.leftwrap .contentwrap {
+    text-align: right;
+}
+
+.additionalfeaturewrap {
+    display: flex;
+    padding: 15px 0;
+}
+
+.additionalfeaturewrap p {
+    margin-bottom: 0;
+    line-height: 17px;
+}
+
+.additionalfeatureswrap>.imgwrap {
+    width: 60%;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    margin: 0 60px;
+}
+
+.leftwrap,
+.rightwrap {
+    margin: 15px 0;
+}
+
+.leftwrap .imgwrap {
+    margin-left: 20px;
+}
+
+.rightwrap .imgwrap {
+    margin-right: 20px;
+}
+
+section.additionalappfeatures .unlock-icon {
+    background: url('../images/unlocked (1).svg') no-repeat;
+    display: inline-block;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
+}
+
+section.additionalappfeatures .paperplane-icon {
+    background: url('../images/send.svg') no-repeat;
+    display: inline-block;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
+}
+
+section.additionalappfeatures .customerservice-icon {
+    background: url('../images/operator.svg') no-repeat;
+    display: inline-block;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
+}
+
+section.additionalappfeatures .usability-icon {
+    background: url('../images/like (3).svg') no-repeat;
+    display: inline-block;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
+}
+
+section.additionalappfeatures .social-icon {
+    background: url('../images/users.svg') no-repeat;
+    display: inline-block;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
+}
+
+section.additionalappfeatures .amazingstyle-icon {
+    background: url('../images/cloud.svg') no-repeat;
+    display: inline-block;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
+}
+
+section.pricingpackages {
+    background: #f4f4f4;
+    padding: 55px 0 65px;
+}
+
+section.pricingpackages h2 {
+    text-align: center;
+    margin-bottom: 29px;
+    font-weight: 400;
+    color: #333;
+    font-size: 32px;
+}
+
+.pricingpackageswrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricingpackagewrap {
+    width: 30%;
+    display: flex;
+    flex-grow: 2;
+    border-radius: 2px;
+    margin-right: 20px;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+}
+
+.pricingpackagewrap:last-child {
+    margin-right: 0;
+}
+
+.pricingpackagewrap li {
+    padding: 8px 0;
+    color: #373737;
+}
+
+section.pricingpackages h3,
+section.pricingpackages .pricewrap,
+section.pricingpackages button {
+    text-align: center;
+}
+
+section.pricingpackages h3 {
+    margin: 22px 0;
+    font-size: 15px;
+}
+
+section.pricingpackages .pricewrap {
+    background: #3fc6c2;
+    width: 100%;
+    padding: 9px 0;
+}
+
+section.pricingpackages .pricewrap span {
+    color: #f9fdfd;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.pricingpackagewrap ul {
+    margin: 20px 0;
+}
+
+.pricingpackagewrap li span {
+    margin-right: 8px;
+}
+
+.pricingpackages .supported-icon {
+    background: url('../images/checked (1).svg') no-repeat;
+    display: inline-block;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.pricingpackages .notsupported-icon {
+    background: url('../images/cancel.svg') no-repeat;
+    display: inline-block;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.pricingpackagewrap button {
+    background: #3ec6c1;
+    color: #ebf9f7;
+    font-size: 13px;
+    border: solid #219894;
+    border-width: 0 0 3px 0;
+    padding: 9px 23px;
+    margin-bottom: 32px;
+    outline: 0;
+    transition: all .3s ease;
+}
+
+.pricingpackagewrap button:hover {
+    background: #219894;
+}
+
+@media (max-width: 1300px) {
+    .wrap {
+        width: 80%;
+    }
+    .additionalfeatureswrap {
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrap {
+        width: 100%;
+        padding: 0 30px;
+    }
+    .additionalfeatureswrap>.imgwrap {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrap {
+        width: 80%;
+        padding: 0;
+    }
+    header .wrap {
+        padding: 0 30px;
+        width: 100%;
+    }
+    section.appdesc .wrap {
+        flex-direction: column;
+    }
+    section.appdesc .imgwrap {
+        width: 80%;
+        margin-right: 0;
+        margin: 0 auto;
+        order: 2;
+        height: 200px;
+    }
+    section.appdesc .contentwrap {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 0 35px;
+        order: 1;
+    }
+    .supportedevices {
+        justify-content: center;
+    }
+    .featureswrap {
+        flex-direction: column;
+    }
+    .featurewrap {
+        width: 50%;
+        margin: 0 auto 30px;
+    }
+    .featurewrap:last-child {
+        margin: 0 auto;
+    }
+    .additionalfeatureswrap {
+        flex-direction: column;
+        width: 50%;
+        padding: 0;
+    }
+    .additionalfeatureswrap>.imgwrap {
+        order: 1;
+        width: 100%;
+        height: 200px;
+        margin: 0 auto 30px;
+    }
+    .additionalfeatureswrap .leftwrap {
+        order: 2;
+    }
+    .additionalfeatureswrap .rightwrap {
+        order: 3;
+    }
+    .additionalfeatureswrap .leftwrap,
+    .additionalfeatureswrap .rightwrap {
+        margin: 0;
+    }
+    .additionalfeaturewrap .imgwrap {
+        order: 1;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+    .additionalfeaturewrap .contentwrap {
+        order: 2;
+        text-align: left;
+    }
+    .pricingpackageswrap {
+        flex-direction: column;
+    }
+    .pricingpackagewrap {
+        width: 50%;
+        margin: 0 auto 30px;
+    }
+    .pricingpackagewrap:last-child {
+        margin: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .wrap {
+        width: 100%;
+        padding: 0 30px;
+    }
+    header .wrap>a {
+        margin-bottom: 15px;
+    }
+    header .wrap {
+        padding: 25px 30px;
+        height: auto;
+    }
+    nav ul li {
+        margin: 0 8px;
+    }
+    section.appdesc .contentwrap {
+        width: 100%;
+    }
+    .featurewrap {
+        width: 100%;
+    }
+    .additionalfeatureswrap {
+        width: 100%;
+        padding: 0 30px;
+    }
+    .pricingpackagewrap {
+        width: 100%;
+    }
+}
